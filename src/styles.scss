@@ -1,0 +1,45 @@
+////////////////////////////////////////////////
+// Variables
+////////////////////////////////////////////////
+$maincolor: rgb(255,162,0);
+$contrastcolor: rgb(231,236,163);
+
+@mixin main-on-cont {
+    color: $maincolor;
+    background-color: $contrastcolor;
+}
+
+@mixin cont-on-main {
+    color: $contrastcolor;
+    background-color: $maincolor;
+}
+
+////////////////////////////////////////////////
+// Header
+////////////////////////////////////////////////
+body {
+    background-color: rgb(73, 48, 9)
+}
+
+nav {
+    @include main-on-cont;
+    display: flex;
+    justify-content: flex-start;
+
+    a {
+        @include cont-on-main;
+        div {
+            margin: 10px;
+            font-size: large;
+        }
+    }
+}
+
+img {
+    max-width: 80%
+}
+
+.queso {
+    background-color: rgba(132,127,115, 0.75);
+    border-radius: 195px;
+}
