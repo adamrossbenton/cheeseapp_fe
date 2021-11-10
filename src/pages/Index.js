@@ -26,7 +26,6 @@ const Index = props => {
     }
 
     const loaded = () => {
-        console.log(props.cheese)
         return props.cheese.map((queso) => (
             <div key={queso._id} className="queso">
                 <Link to={`/cheese/${queso._id}`}><h1>{queso.name}</h1></Link>
@@ -47,14 +46,14 @@ const Index = props => {
                     type="text"
                     value={newForm.name}
                     name="name"
-                    placeholder="name"
+                    placeholder="Name"
                     onChange={handleChange}
                 />
                 <input 
                     type="text"
                     value={newForm.image}
                     name="image"
-                    placeholder="image URL"
+                    placeholder="Image URL"
                     onChange={handleChange}
                 />
                 <input 

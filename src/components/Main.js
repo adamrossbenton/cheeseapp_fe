@@ -18,7 +18,7 @@ const Main = props => {
         await fetch(URL, {
             method: "post",
             headers: {
-                "Content-Type": "applicaton/json"
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(cheese)
         })
